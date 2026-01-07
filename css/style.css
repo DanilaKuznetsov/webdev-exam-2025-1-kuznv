@@ -1,0 +1,50 @@
+/* Кастомизация Bootstrap */
+.container {
+    max-width: 1400px;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+#orderForm label {
+    font-weight: 500;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .row > div {
+        margin-bottom: 20px;
+    }
+    
+    .table {
+        font-size: 0.9rem;
+    }
+}
+
+/* Hover эффекты */
+.table tbody tr:hover {
+    background-color: #f8f9ff;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Форма */
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.25);
+}
+
+/* Tooltip стилизация */
+.tooltip-inner {
+    background-color: #343a40;
+    border-radius: 6px;
+}
