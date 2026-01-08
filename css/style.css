@@ -1,50 +1,173 @@
-/* Кастомизация Bootstrap */
-.container {
-    max-width: 1400px;
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.table th {
-    background-color: #f8f9fa;
-    font-weight: 600;
+main {
+    flex: 1;
 }
 
-.btn {
-    margin-right: 10px;
+.hero-section {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
 }
 
-#orderForm label {
-    font-weight: 500;
+.hero-section img {
+    border-radius: 15px;
 }
 
-/* Адаптив для мобильных */
-@media (max-width: 768px) {
-    .row > div {
-        margin-bottom: 20px;
+.notification-container {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 1050;
+    max-width: 400px;
+}
+
+.notification {
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
     }
-    
-    .table {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-card {
+    height: 100%;
+}
+
+.course-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card .btn {
+    margin-top: auto;
+}
+
+.table-hover tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.tutor-selected {
+    background-color: #d4edda !important;
+}
+
+.modal-backdrop {
+    z-index: 1040;
+}
+
+.modal {
+    z-index: 1050;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.badge {
+    font-size: 0.85em;
+    padding: 0.4em 0.8em;
+}
+
+@media (max-width: 768px) {
+    .notification-container {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+    }
+
+    .table-responsive {
         font-size: 0.9rem;
     }
 }
 
-/* Hover эффекты */
-.table tbody tr:hover {
-    background-color: #f8f9ff;
+.loading-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 0.2em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border 0.75s linear infinite;
 }
 
-.btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+@keyframes spinner-border {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-/* Форма */
-.form-control:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.25);
+.form-check-input:disabled {
+    opacity: 0.5;
 }
 
-/* Tooltip стилизация */
-.tooltip-inner {
-    background-color: #343a40;
-    border-radius: 6px;
+.price-breakdown {
+    font-size: 0.9em;
+}
+
+.price-breakdown .discount {
+    color: #28a745;
+}
+
+.price-breakdown .surcharge {
+    color: #dc3545;
+}
+
+#map {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ymaps-2-1-79-balloon__content {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.ymaps-2-1-79-balloon__layout {
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 400px !important;
+    }
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.text-success {
+    color: #28a745 !important;
 }
